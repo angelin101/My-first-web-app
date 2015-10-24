@@ -17,6 +17,10 @@
       <tr>
         <td>${post.id}</td>
         <td>${post.txt}</td>
+        <td><a href="/delete?id=${post.id}">
+          <img src="delete.png">
+        </a>
+        </td>
       </tr>
    </c:forEach>
   </table>
