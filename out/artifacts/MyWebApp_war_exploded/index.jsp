@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: Ангелин
@@ -11,7 +12,7 @@
     <title></title>
   </head>
   <body>
-        <table>
+        <table border="1">
           <tr>
             <td>Посещений: </td>
             <td><%=(request.getAttribute("current_count"))%></td>

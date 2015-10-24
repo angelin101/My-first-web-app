@@ -18,7 +18,7 @@ public class PostServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("posts", DAO.getPost()); // ”станавливаем атрибуты дл€ запроса
-        request.getRequestDispatcher("index.jsp").forward(request, response); // ќпрокидываем запрос и ответ дальше на стартовую страницу
+        request.setAttribute("post", DAO.getPost()); // ”станавливаем атрибуты дл€ запроса
+        request.getRequestDispatcher("post.jsp").forward(request, response); // ќпрокидываем запрос и ответ дальше на стартовую страницу
     }
 }
