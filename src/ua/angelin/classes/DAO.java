@@ -30,4 +30,7 @@ public class DAO {
             }
         }
     }
+    public static void addPost(String txt){
+        post.add(new Post(post.size()+1, txt));
+    }
 }

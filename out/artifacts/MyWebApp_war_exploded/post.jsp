@@ -13,16 +13,26 @@
 </head>
 <body>
   <table border="1">
-   <c:forEach items="${post}" var="post">
+   <c:forEach items="${post}" var="post"> // Делаем цикл с помошью библиотеки JSTL
       <tr>
         <td>${post.id}</td>
-        <td>${post.txt}</td>
+        <td><c:out value="${post.txt}"></c:out></td>// Для предотвращения взлома HTMLя
         <td><a href="/delete?id=${post.id}">
           <img src="delete.png">
         </a>
         </td>
       </tr>
    </c:forEach>
+    <form action="/add" method="post">
+      <tr>
+        <td colspan="2">
+          <input name="txt" type="text">
+        </td>
+        <td>
+          <input type="submit">
+        </td>
+      </tr>
+    </form>
   </table>
 </body>
 </html>
