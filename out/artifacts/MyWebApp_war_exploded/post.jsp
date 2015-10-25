@@ -10,13 +10,14 @@
 <html>
 <head>
     <title></title>
+    <cha
 </head>
 <body>
   <table border="1">
-   <c:forEach items="${post}" var="post"> // Делаем цикл с помошью библиотеки JSTL
+   <c:forEach items="${post}" var="post"> <%-- Делаем цикл с помошью библиотеки JSTL --%>
       <tr>
         <td>${post.id}</td>
-        <td><c:out value="${post.txt}"></c:out></td>// Для предотвращения взлома HTMLя
+        <td><c:out value="${post.txt}"></c:out></td> <%-- Для предотвращения взлома HTMLя (Экранирует теги)--%>
         <td><a href="/delete?id=${post.id}">
           <img src="delete.png">
         </a>
